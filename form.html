@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2 id="heading">Complete Your Order</h2>
+            <form  action="" onsubmit="sub()">
+                <div class="info">
+                     Name <input type="text" id="user" required><br><br>
+                     Telephone <input type="tel" id="tele" maxlength="10" required><br><br>
+                     Shipping address <br><textarea rows="5" cols="50" required></textarea><br><br>
+                     E-mail <input type="email" id="mail"><br><br>
+                     Payment method
+                     <input type="radio" name="payment" id="visa" class="input-hidden" required><label for="visa"><img src="img/visa.png"></label>
+                     <input type="radio" name="payment" id="mc" class="input-hidden" required><label for="mc"><img src="img/mastercard.png"></label>
+                     <input type="radio" name="payment" id="ae" class="input-hidden" required><label for="ae"><img src="img/american-express.png"></label>
+                </div>
+                <div class="btn-pay">
+                    <button type="submit" id="pay">Pay</button>
+                </div>
+            </form>
+            <script>
+                function sub(){
+                    window.alert("Your is completed!");
+                }
+            </script>
+    </body>
+</html>

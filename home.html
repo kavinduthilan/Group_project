@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Group Project</title>
+        <link rel="stylesheet" type="text/css" href="home.css" >
+    </head>
+    <body>
+        <!--Header section-->
+        <header class="header">
+            <div class="menubar">
+                <img src="img/dish.png">
+                <div class="name">kingfisher<br>Cafe</div>
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="contact_us.html">Contact us</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!--home section-->
+
+        <div class="home">
+            <div class="text">
+                <div class="line1">Welcome to <span>kingfisher</span></div>
+                <div class="line2">opening hours</div>
+                <div class="line3">Monday-Friday <span class="time">08.30AM-22.00PM</span></div>
+                <div class="line4">Weekends    <span class="time">08.30AM-18.00PM</span></div>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="vacancy">
+                <h1>WE'RE<br><span>hiring</span></h1>
+                <img src="img/cook.png">
+                <div class="jobs">
+                    <ul>
+                        <li>BAKERY MANAGER</li>
+                        <li>BAKERY SUPERVISOR</li>
+                        <li>WAITER</li>
+                        <li>DELIVER</li>
+                    </ul>
+                </div>
+                <button onclick="vacancy()">more >></button>
+            </div>
+            <div class="toppicks">
+                <h2>TOP PICKS</h2>
+                <div class="slides">
+                    <img src="img/food1.jpg">
+                </div>
+                <div class="slides">
+                    <img src="img/food3.jpg">
+                </div>
+                <div class="slides">
+                    <img src="img/food4.jpg">
+                </div>
+                <div class="slides">
+                    <img src="img/food9.jpg">
+                </div>
+
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+
+                </div>
+                
+            </div>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("slides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1}    
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+
+                function vacancy(){
+                    window.open("vacancy.html");
+                }
+                </script>
+        </div>
+
+        
+        <!--features section-->
+     
+        <section class="features">
+            <h1>Our <span>features</span></h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="img/delicious.png" alt="">
+                    <h3>Fresh & Delicious</h3>
+                    <p>We offer a wide array of fresh food – pizza, crispy chicken bucket, cheese pasta and prawn fried rice and more. We use the freshest ingredients in preparing our food to provide the best quality and taste. Try our delicious food today! </p>
+                </div>
+                <div class="box">
+                    <img src="img/delivery-man.png" alt="">
+                    <h3>Free Delivery</h3>
+                    <p>We are the one of the best unique delivery fulfillment arm with the promise of offering free and the quickest service in door to door delivery around in Colombo.</p>                    
+                </div>
+                <div class="box">
+                    <img src="img/debit-card.png" alt="">
+                    <h3>Easy payments</h3>
+                    <p>We offers you multiple payment methods. You may use Call on delivery, Visa card and Master card. Whatever your online mode of payment, we assure to keep your transaction details confidential at all times.</p>
+                </div>
+            </div>
+            
+        </section>   
+
+    <!--Footer Section-->
+        <footer class="footer">
+            <div class="row">
+                <div class="col">
+                    <p id="caption">"Ours is a story driven <br>by an enduring <br>passion for customer <br>service."</p>
+                </div>
+                
+                <div class="col">
+                    <h3> Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Contact Info</h3>
+                    <div class="contact">
+                        <p><img src="img/p3.jpeg"> Kingfisher Cafe,New Kandy Road,Malabe.</p>
+                        <p><img src="img/p2.jpeg"> +94 11 6544 801</p>
+                        <p><img src="img/p1.jpeg"> kingfisher@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Follow us</h3>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/"><img src="img/facebook.png"></a>
+                        <a href="https://www.instagram.com/"><img src="img/instagram.png"></a>
+                        <a href="https://www.twitter.com/"><img src="img/twitter.png"></a>
+                        <a href="https://www.youtube.com/"><img src="img/youtube.png"></a>
+                    </div>
+                </div>
+            </div>
+            <hr color="white" width="95%">
+            <p>@copyright2022 | Designed by Group 10</p>
+        </footer>
+    </body>
+</html>

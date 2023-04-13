@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <!--header-->
+    <header class="header">
+        <div class="menubar">
+            <img src="img/dish.png">
+            <div class="name">kingfisher<br>Cafe</div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li class="active"><a href="#">Order</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <section>
+        <div class="container">
+           <h2 id="heading">Complete Your Order</h2>
+            <form  action="#">
+                <div class="info">
+                    Name <input type="text" id="user"><br><br>
+                    Telephone <input type="tel" id="tele"><br><br>
+                    Shipping address <br><textarea rows="5" cols="50"></textarea><br><br>
+                    E-mail <input type="email" id="mail"><br><br>
+                    Payment method
+                    <input type="radio" name="payment" id="visa" class="input-hidden"><label for="visa"><img src="img/visa.png"></label>
+                    <input type="radio" name="payment" id="mc" class="input-hidden"><label for="mc"><img src="img/mastercard.png"></label>
+                    <input type="radio" name="payment" id="ae" class="input-hidden"><label for="ae"><img src="img/american-express.png"></label>
+                </div>
+                
+
+                <div class="input">
+                    <div class="form-group ">
+                        <label class="form-label" for="product">Product</label>
+                        <select class="form-control" id="product">
+                            <option value="Pizza" id="item1">Pizza</option>
+                            <option value="Classic Potato Chips Lay's" id="items2">Classic Potato Chips Lay's</option>
+                            <option value="Ribeye Steak" id="item3">Ribeye Steak</option>
+                            <option value="Crispy Chicken Bucket" id="item4">Crispy Chicken Bucket</option>
+                            <option value="Tandoori chicken" id="item5">Tandoori chicken</option>
+                            <option value="Vegan Indian Tofu Tikka Masala" id="item6">Vegan Indian Tofu Tikka Masala</option>
+                            <option value="Gobi Paratha" id="item7">Gobi Paratha</option>
+                            <option value="Prawn malai curry" id="item8">Prawn malai curry</option>
+                            <option value="White Cheese & Chicken Lasagna" id="item9">White Cheese & Chicken Lasagna</option>
+                            <option value="Cheese Pasta" id="item10">Cheese Pasta</option>
+                            <option value="Algerienne Fish" id="item11">Algerienne Fish</option>
+                            <option value="Prawn Fried Rice" id="item12">Prawn Fried Rice</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="range">Quantity</label>
+                        <input class="form-control" type="number" id="range" min="1" value="1">
+                    </div>
+                </div>
+                <h4 class="ta-center" id="alert"></h4>
+                <div class="form-group">
+                    <button id="calcBtn" type="submit" class="btn btn-primary">Add To Bill</button>
+                    <button class="btn btn-reset" id="reload">Reset</button>
+                </div>
+            </form>
+            <br>
+            <hr>
+            <br>
+            <div class="display-product">
+                <table class="">
+                    <thead>
+                        <tr>
+                            <th class="th">Product</th>
+                            <th class="th">Quantity</th>
+                            <th class="th">Price(LKR)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    
+                    </tbody>
+                </table>
+                <div class="display-total">
+                    <h3 id="heading2">In total: LKR. <span id="totalRange"></span></h3>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-finish">Pay Now</button>
+       </div>
+    </section>
+
+    <footer class="footer">
+        <div class="row">
+            <div class="col">
+                <p id="caption">"Ours is a story driven <br>by an enduring <br>passion for customer <br>service."</p>
+
+            </div>
+            
+            <div class="col">
+                <h3> Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Order</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Contact Info</h3>
+                <div class="contact">
+                    <p><img src="img/p3.jpeg"> Kingfisher Cafe,New Kandy Road,Malabe.</p>
+                    <p><img src="img/p2.jpeg"> +94 11 6544 801</p>
+                    <p><img src="img/p1.jpeg"> kingfisher@gmail.com</p>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Follow us</h3>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/"><img src="img/facebook.png"></a>
+                    <a href="https://www.instagram.com/"><img src="img/instagram.png"></a>
+                    <a href="https://www.twitter.com/"><img src="img/twitter.png"></a>
+                    <a href="https://www.youtube.com/"><img src="img/youtube.png"></a>
+                </div>
+            </div>
+        </div>
+        <hr color="white" width="95%">
+        <p>@copyright2022 | Designed by Group 10</p>
+    </footer>
+
+    <!--Js-->
+    <script>
+        const product = document.getElementById("product");
+        const range = document.getElementById("range");
+        const calcBtn = document.getElementById("calcBtn");
+        const reload = document.getElementById("reload");
+        const alert = document.getElementById("alert")
+
+        const tbody = document.getElementById("tbody");
+        const display = document.getElementById("totalRange");
+        let sum = 0;
+
+
+// DOM Manupulate
+reload.addEventListener('click', ()=>{
+    reload.reload();
+})
+calcBtn.addEventListener('click', (e)=> {
+    e.preventDefault();
+
+    if(product.value == '' || range.value == ''){
+        alert.innerHTML = 'Invalid Creadential!';
+        alert.style.color = 'red';
+    }else{
+        alert.innerHTML = ''
+        // Creat Elements
+        const  tr = document.createElement('tr');
+        const td1  = document.createElement('td')
+        const td2  = document.createElement('td')
+        const td3  = document.createElement('td')
+        tbody.appendChild(tr)
+        tr.appendChild(td1)
+        tr.appendChild(td2)
+        tr.appendChild(td3)
+
+        let food_item1 = 830.50;
+        let food_item2 = 800.99;
+        let food_item3 = 650.00;
+        let food_item4 = 1200.00;
+        let food_item5 = 780.00;
+        let food_item6 = 660.00;
+        let food_item7 = 450.00;
+        let food_item8 = 899.00;
+        let food_item9 = 1250.00;
+        let food_item10= 860.00;
+        let food_item11= 990.00;
+        let food_item12= 560.00;
+        let ans;
+        
+
+        if(document.getElementById("product").value=="Pizza"){
+            ans = food_item1*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="Classic Potato Chips Lay's"){
+            ans = food_item2*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="Ribeye Steak"){
+            ans = food_item3*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="Crispy Chicken Bucket"){
+            ans = food_item4*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="Tandoori chicken"){
+            ans = food_item5*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="Vegan Indian Tofu Tikka Masala"){
+            ans = food_item6*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="Gobi Paratha"){
+            ans = food_item7*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="Prawn malai curry"){
+            ans = food_item8*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="White Cheese & Chicken Lasagna"){
+            ans = food_item9*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="Cheese Pasta"){
+            ans = food_item10*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="Algerienne Fish"){
+            ans = food_item11*Number(range.value);
+        }
+        else if(document.getElementById("product").value=="Prawn Fried Rice"){
+            ans = food_item12*Number(range.value);
+        }
+
+        // Dispaly Data
+        td1.innerHTML = product.value
+        td2.innerHTML = Number(range.value)
+        td3.innerHTML = ans
+
+        display.innerHTML = sum += ans
+    }
+
+})
+    </script>
+</body>
+</html>

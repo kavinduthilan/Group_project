@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+	<link rel="stylesheet" type="text/css" href="menu.css">
+
+</head>
+<body>
+	<header class="header">
+		<div class="menubar">
+			<img src="img/dish.png">
+			<div class="name">kingfisher<br>Cafe</div>
+			<ul>
+				<li ><a href="home.html">Home</a></li>
+				<li><a href="about_us.html">About us</a></li>
+				<li class="active"><a href="menu.html">Menu</a></li>
+				<li><a href="order.html">Order</a></li>
+				<li><a href="contact_us.html">Contact us</a></li>
+			</ul>
+		</div>
+	</header>
+ 	<div id="backgroundimage">
+ 	<div id="backgroundimage_discription">
+ 		<h1 >Kingfisher Cafe</h1>
+ 		<p>Nothing to eat here...
+Let’s discover something delicious.</p>
+ 	</div>
+ 	</div>
+ 		
+ 	<div id="part_1">
+
+ 		<button id="button1" onclick="openform()">My Cart</button>
+	
+		 <div id="part_2">
+ 			<h2>Top picks</h2>
+ 			<hr id="line">
+ 			<div id="part_2_column1">
+ 				<img src="img\food1.jpg" width="100%" height="200px">
+ 				<p>Pizza</p>
+ 				<br>
+ 				<div>LKR 830.00</div>
+				<div class="idpart">
+ 					<button class="button2" value="pizza" id="food1" onclick="mycart('pizza')">Add to cart</button>
+ 					<div class="divbtn">
+ 						<button class="min" onclick="min(1)">-</button>
+ 						<input type="number" id="dis1" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(1)">+</button>
+ 					</div>
+ 				</div>
+ 			</div>
+ 			<div id="part_2_column1"><img src="img\food2.jpg" width="100%" height="200px">
+ 				<p>Classic Potato Chips Lay's</p>
+ 				<br>
+ 				<div>LKR 800.00</div>
+ 				<div class="idpart">
+ 					<button class="button2" id="food2"  value="chips" onclick="mycart('chips')">Add to cart</button>
+ 					<div class="divbtn">
+ 						<button class="min" onclick="min(2)">-</button>
+ 						<input type="number" id="dis2" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(2)">+</button>
+ 					</div>
+ 				</div>
+ 			</div>
+ 			<div id="part_2_column1"><img src="img\food3.jpg" width="100%" height="200px">
+ 				<p>Ribeye Steak</p>
+ 				<br>
+ 				<div>LKR 650.00</div>
+ 			<div class="idpart">
+ 				      <button class="button2" id="food3" value="steak"onclick="mycart('steak')">Add to cart</button>
+ 				    <div class="divbtn">
+ 						<button class="min" onclick="min( 3)">-</button>
+ 						<input type="number" id="dis3" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(3)">+</button>
+ 					</div>
+ 			</div>
+ 			</div>
+ 			<div id="part_2_column1"><img src="img\food4.jpg" width="100%" height="200px">
+ 				<p>Crispy Chicken Bucket(8pcs)</p>
+ 				<br>
+ 				<div>LKR 1200.00</div>
+ 			<div class="idpart">
+ 				<button class="button2" id="food4" value="cripsy" onclick="mycart('cripsy')">Add to cart</button>
+ 				<div class="divbtn">
+ 						<button class="min" onclick="min( 4)">-</button>
+ 						<input type="number" id="dis4" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus( 4)">+</button>
+ 				</div>
+ 			</div>
+ 			</div>
+ 			
+ 		</div>
+ 		
+ 	</div>	
+ 	<div id="part_1">
+ 		<div id="part_2">
+ 			<h2>Mains</h2>
+ 			<hr id="line">
+ 			<div id="part_2_column1">
+ 				<img src="img\food5.jpg" width="100%" height="200px">
+ 				<p>Tandoori chicken</p>
+ 				<br>
+ 				<div>LKR 780.00</div>
+ 				<div class="idpart">
+ 				<button class="button2" id="food5" value="tando" onclick="mycart('tando')">Add to cart</button>
+ 				<div class="divbtn">
+ 						<button class="min" onclick="min(5)">-</button>
+ 						<input type="number" id="dis5" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(5)">+</button>
+ 				</div>
+ 			</div>
+ 			</div>
+ 			<div id="part_2_column1">
+ 				<img src="img\food6.jpg" width="100%" height="200px">
+ 				<p>Vegan Indian Tofu Tikka Masala</p>
+ 				<br>
+ 				<div>LKR 660 .00</div>
+ 				<div class="idpart">
+ 				<button class="button2" id="food6" value="vegan" onclick="mycart('vegan')">Add to cart</button>
+ 				<div class="divbtn">
+ 						<button class="min" onclick="min( 6)">-</button>
+ 						<input type="number" id="dis6" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(6)">+</button>
+ 				</div>
+ 			</div>
+ 			</div>
+ 			<div id="part_2_column1"><img src="img\food7.jpg" width="100%" height="200px">
+ 				<p>Gobi Paratha</p>
+ 				<br>
+ 				<div>LKR 450.00</div>
+ 				<div class="idpart">
+ 				<button class="button2" id="food7" value="gobi" onclick="mycart('gobi')">Add to cart</button>
+ 				<div class="divbtn">
+ 						<button class="min" onclick="min(7)">-</button>
+ 						<input type="number" id="dis7" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(7)">+</button>
+ 				</div>
+ 			</div>
+ 			</div>
+ 			<div id="part_2_column1"><img src="img\food8.jpg" width="100%" height="200px">
+ 				<p>	Prawn malai curry</p>
+ 				<br>
+ 				<div>LKR 899.00</div>
+ 				<div class="idpart">
+ 				<button class="button2" id="food8" value="prawn" onclick="mycart('prawn')">Add to cart</button>
+ 				<div class="divbtn">
+ 						<button class="min" onclick="min(8)">-</button>
+ 						<input type="number" id="dis8" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(8)">+</button>
+ 				</div>
+ 			</div>
+ 			</div>
+ 		</div>
+ 		
+ 	</div>	
+ 	<div id="part_1">
+ 		<div id="part_2">
+ 			<div id="part_2_column1"><img src="img\food9.jpg" width="100%" height="200px">
+ 				<p>	White Cheese & Chicken Lasagna</p>
+ 				<br>
+ 				<div>LKR 1250.00</div>
+ 				<div class="idpart">
+ 				<button class="button2" id="food9" value="lasagna" onclick="mycart('lasagna')">Add to cart</button>
+ 				<div class="divbtn">
+ 						<button class="min" onclick="min(9)">-</button>
+ 						<input type="number" id="dis9" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(9)">+</button>
+ 				</div>
+ 			</div>
+ 			</div>
+ 			<div id="part_2_column1"><img src="img\food10.jpg" width="100%" height="200px">
+ 				<p>	Cheese Pasta</p>
+ 				<br>
+ 				<div>LKR 860.00</div>
+ 				<div class="idpart">
+ 				<button class="button2" id="food10" value="pasta" onclick="mycart('pasta')">Add to cart</button>
+ 				<div class="divbtn">
+ 						<button class="min" onclick="min(10)">-</button>
+ 						<input type="number" id="dis10" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(10)">+</button>
+ 				</div>
+ 			</div>
+ 			</div>
+ 			<div id="part_2_column1"><img src="img\food11.jpg" width="100%" height="200px">
+ 				<p>	Algerienne Fish</p>
+ 				<br>
+ 				<div>LKR 990.00</div>
+ 				<div class="idpart">
+ 				<button class="button2" id="food11" value="fish" onclick="mycart('fish')">Add to cart</button>
+ 				<div class="divbtn">
+ 						<button class="min" onclick="min(11)">-</button>
+ 						<input type="number" id="dis11" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(11)">+</button>
+ 				</div>
+ 			</div>
+ 			</div>
+ 			<div id="part_2_column1"><img src="img\food12.jpg" width="100%" height="200px">
+ 				<p>Prawn Fried Rice</p>
+ 				<br>
+ 				<div>LKR 560.00</div>
+ 				<div class="idpart">
+ 				<button class="button2" id="food12" value="fried" onclick="mycart('fried')">Add to cart</button>
+ 				<div class="divbtn">
+ 						<button class="min" onclick="min(12)">-</button>
+ 						<input type="number" id="dis12" class="dis" value="0" min="0">
+ 						<button class="plus" onclick="plus(12)">+</button>
+ 				</div>
+ 			</div>
+ 			</div>
+ 		</div>
+ 		
+ 	</div>
+	 <form>
+		<div class="cart" id="myform">
+			<table>
+				<thead>
+					<tr>
+						<th>Item No:</th>
+						<th class="th">Product</th>
+						<th class="th">Quantity</th>
+						<th class="th">Price(LKR)</th>
+					</tr>
+				</thead>
+				<tbody id="tbody">
+				
+				</tbody>
+			</table>
+			<div class="display-total">
+				<h3 id="heading2">In total: LKR. <span id="totalRange"></span></h3>
+			</div>
+			<div class="two-btn">
+				<button id="purchase">Purchase</button>
+				<button id="reset">Reset</button>
+				<button id="exit" onclick="exitform()">Exit</button>
+			</div>
+		</div>
+	</form>	
+	<script src="menu.js"></script>
+</body>
+</html>

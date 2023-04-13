@@ -1,0 +1,360 @@
+body{
+    background-color: white;
+    margin: 0px;
+}
+.header .menubar{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(51,50,50);
+    position: fixed;
+}
+.header .menubar .name{
+    position: absolute;
+    left: 120px;
+    top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    color:goldenrod;
+}
+.header .menubar img{
+    width: 100px;
+    height: 80px;
+    margin: 10px;
+    float: left;
+}
+.header .menubar ul{
+    display: inline-flex;
+    list-style: none;
+    float: right;
+}
+
+.header .menubar ul li{
+    padding: 10px;
+    margin-right: 40px;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgb(51,50,50);
+
+}
+
+
+.header .menubar ul li a{
+    text-decoration: none;
+    color: goldenrod;
+}
+
+.header .active, .header .menubar ul li:hover{
+    text-decoration: underline;
+    text-decoration-color: goldenrod;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 5px;
+}
+
+
+
+
+                                                                                       
+
+
+
+
+
+
+
+
+.home{
+    padding-top: 200px;
+    background-image: url("img/bg41.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    background-size: 100% 600px;
+    margin-top: 0px;
+}
+
+.home .text{
+    position: static;
+    padding-left: 420px;
+}
+.home .text .line1{
+    font-style: italic;
+    font-size: 80px;
+    color: rgb(240, 233, 233);
+    font-weight: 900;
+    padding-top: 100px;
+}
+.home .text .line1 span{
+    color: goldenrod;
+}
+.home .text .line2{
+    font-size: 20px;
+    color: whitesmoke;
+    margin-top: 25px;
+    padding-bottom: 30px;
+    padding-top: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 300px;
+}
+.home .text .line3{
+    font-size: 16px;
+    color: rgb(228, 229, 245);
+    padding-left: 270px;
+}
+.home .text .line4{
+    font-size: 16px;
+    color: rgb(228, 229, 245);
+    padding-left: 285px;
+    padding-top: 10px;
+}
+
+.home .text button:hover{
+    border: 2px solid black;
+}
+
+
+
+.flex-container{
+    margin-top: -125px;
+    display: flex;
+    background-color: rgb(51,50,50);
+    justify-content: space-around;
+}
+.flex-container > div{
+    background-color: rgb(39,33,33,0.6);
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+}
+.flex-container .vacancy{
+    background-color: black;
+}
+
+.flex-container .vacancy h1{
+    text-align: center;
+    color: rgb(51,50,50);
+    background-color: burlywood;
+    height: 70px;
+    margin-top: 0px;
+    padding-top: 10px;
+}
+.flex-container .vacancy h1 span{
+    color: #E16428;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+}
+.flex-container .vacancy img{
+    float: left;
+    width: 50%;
+    height: 220px;
+    margin-top: -22px;
+}
+.flex-container .vacancy .jobs{
+    clear: right;
+}
+.flex-container .vacancy .jobs ul li{
+    list-style: none;
+    margin-left: 180px;
+    color: white;
+    font-style: italic;
+}
+.flex-container .vacancy button{
+    width: 70px;
+    height: 30px;
+    clear: right;
+    margin-left: 20px;
+    background-color: burlywood;
+    border-radius: 5px;
+    border-color: burlywood;
+    font-weight: bold;
+}
+.flex-container .toppicks{
+    background-color: burlywood;
+}
+.flex-container .toppicks h2{
+    text-align: center;
+    color: black;
+}
+.flex-container .toppicks .slides{
+    display: none;
+}
+.flex-container .toppicks .slides img{
+    width: 400px;
+    height: 200px;
+}
+.active{
+    background-color: black;
+}
+.dot{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(59, 58, 58);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-iteration-count: 10;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+
+
+
+
+
+
+
+
+.features h1{
+    text-align: center;
+    font-weight: bolder;
+}
+.features h1 span{
+    width: 150px;
+    height: 20px;
+}
+
+.features .box-container{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    background-color: black;
+    padding: 10px;
+    
+}
+
+.features .box-container .box{
+    background-color: burlywood;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 20px;
+    border: 2px solid goldenrod;
+    margin-bottom: 50px;
+}
+
+.features .box-container .box:hover{
+    border: 3px solid black;
+
+    
+}
+
+.features .box-container .box img{
+    width: 100px;
+    height: 100px;
+    margin: auto 100px;
+    
+}
+
+.features .box-container .box h3{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(54, 39, 2);
+    font-weight: bold;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.features .box-container .box p{
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: 260px;
+    color: goldenrod;
+    font-size: 16px;
+    line-height: 18px;
+    background: linear-gradient(to right,black,rgb(51, 50, 50));
+}
+
+.footer .row{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto auto;
+}
+.footer .row .col{
+    padding: 10px;
+
+}
+.footer .row .col ul{
+    list-style: none;
+}
+
+.footer .row .col ul li{
+    margin-bottom: 10px;
+}
+
+.footer .row .col ul li a{
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.footer .row .col ul li a:hover{
+    font-weight: bold;
+}
+
+.footer .row .col h3{
+    margin-bottom: 10px;
+}
+
+.footer .row .col p{
+    text-align: justify;
+}
+.footer .row .col #caption{
+    padding-top: 15px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.footer .contact p img{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    padding-top: 0px;
+    
+}
+.footer .social-media {
+    margin-top: 30px;
+}
+
+.footer .social-media a img{
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.footer p{
+    margin-left: 10px; 
+    font-style: italic;
+    padding-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
